@@ -69,8 +69,9 @@ namespace QuotesAlexaSkill
                             (innerResponse as PlainTextOutputSpeech).Text = UNKNOWN_MESSAGE;
                             break;
                     }
+                    response.Response.OutputSpeech = innerResponse;
                 }
-
+                
                 Log(JsonConvert.SerializeObject(response));
 
                 return response;
